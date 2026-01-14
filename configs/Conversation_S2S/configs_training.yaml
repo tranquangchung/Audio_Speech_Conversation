@@ -1,0 +1,46 @@
+model:
+  name: Qwen/Qwen2-Audio-7B
+
+tokenizer:
+  name: Qwen/Qwen2-Audio-7B
+
+data:
+  json_files:
+    train:
+      - "bigdataset/voiceassistant_S2S_700L/train.json"
+#      - "bigdataset/voiceassistant_S2S/train.json"
+    dev:
+      - "bigdataset/voiceassistant_S2S_700L/val.json"
+#      - "bigdataset/voiceassistant_S2S/val.json"
+
+  max_length: 320000  # 20 seconds at 16kHz
+  sampling_rate: 16000
+
+speech_token:
+  bos: 6561
+  eos: 6562
+
+training:
+  output_dir: "result_1/S2S/qwen2llm_conversation_BS18_LR5e4_SpecialToken_PretrainedS2T_Unit_only_700"
+  per_device_train_batch_size: 18
+  per_device_eval_batch_size: 18
+  num_train_epochs: 100
+  learning_rate: 5e-4
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1e-8
+  warmup_steps: 1000
+  num_workers: 4
+  save_iterations: 5000
+  early_stopping_patience: 10
+  keep_last_n_checkpoints: 5
+
+debug:
+  save_iterations: 5000
+
+spl_training: False # True
+self_pace:
+  lambda_val: 2 # 2.0
+  increment_step: 0.15 #1.0
+  iteration: 5000

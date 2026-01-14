@@ -1,0 +1,38 @@
+[
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "hello this is content of file",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    },
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "this is another sentence",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    },
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "hello this is content of file",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    },
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "this is another sentence",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    },
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "hello this is content of file",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    },
+    {
+        "audio": "/home/ldap-users/Share/Data/librispeech/train-clean-360/8824/279153/8824-279153-0120.flac",
+        "text": "this is another sentence",
+        "prompt": "please transcript the audio",
+        "task": "ASR"
+    }
+]

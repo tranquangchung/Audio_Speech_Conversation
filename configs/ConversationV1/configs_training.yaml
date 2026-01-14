@@ -1,0 +1,41 @@
+model:
+  name: Qwen/Qwen2-Audio-7B
+
+tokenizer:
+  name: Qwen/Qwen2-Audio-7B
+
+data:
+  json_files:
+#    train:
+#      - "bigdataset/librispeech/train-other-500.json"
+#      - "bigdataset/librispeech/train-clean-360.json"
+#      - "bigdataset/librispeech/train-clean-100.json"
+#    dev:
+#      - "bigdataset/librispeech/dev-other.json"
+#      - "bigdataset/librispeech/dev-clean.json"
+    train:
+      - "bigdataset/voiceassistantV2/train.json"
+    dev:
+      - "bigdataset/voiceassistantV2/val.json"
+
+  max_length: 320000  # 20 seconds at 16kHz
+  sampling_rate: 16000
+
+training:
+  output_dir: "result_1/dialogueV2/qwen2lora_audio_dialogue_1e4_bs8_fixEOS"
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  num_train_epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1e-8
+  warmup_steps: 1000
+  num_workers: 8
+  save_iterations: 10000
+  early_stopping_patience: 10
+  keep_last_n_checkpoints: 5
+
+debug:
+  save_iterations: 100
