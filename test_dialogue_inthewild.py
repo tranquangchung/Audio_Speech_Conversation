@@ -98,7 +98,6 @@ for index, audio_path in enumerate(audio_files):
     # --- 4. Decode ---
     input_len = inputs['input_ids'].size(1)
     generated_ids_trimmed = generate_ids[:, input_len:]
-    pdb.set_trace()
 
     result = processor.batch_decode(
         generated_ids_trimmed,
