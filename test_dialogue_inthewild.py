@@ -23,7 +23,7 @@ model = model.to(device).eval()
 IM_END_ID = processor.tokenizer.convert_tokens_to_ids("<|im_end|>")
 
 # --- 🆕 Data Configuration for "In the Wild" ---
-audio_folder = "/home/ldap-users/s2220411/Code/new_explore_tts/CosyVoice/LLM_Question"
+audio_folder = "./LLM_Question"
 print(f"Scanning directory: {audio_folder}")
 
 # Get all .wav files and sort them (01.wav, 02.wav, etc.)
