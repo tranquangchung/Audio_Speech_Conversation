@@ -13,7 +13,7 @@ The pre-trained and fine-tuned checkpoints for this dialogue system are availabl
 You can clone the model using:
 ```bash
 git lfs install
-git clone [https://huggingface.co/tranquangchung/qwen2-audio-dialogue](https://huggingface.co/tranquangchung/qwen2-audio-dialogue)
+git clone https://huggingface.co/tranquangchung/qwen2-audio-dialogue
 ```
 
 ## 🚀 Getting Started
